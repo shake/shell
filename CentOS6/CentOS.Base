@@ -1,0 +1,40 @@
+# CentOS-Base.repo
+#
+
+[base]
+name=CentOS-6.8 - Base - tuna.tsinghua.edu.cn
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/centos-vault/6.8/os/$basearch/
+gpgcheck=1
+gpgkey=http://mirror.tuna.tsinghua.edu.cn/centos-vault/RPM-GPG-KEY-CentOS-6
+
+#released updates 
+[updates]
+name=CentOS-6.8 - Updates - tuna.tsinghua.edu.cn
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/centos-vault/6.8/updates/$basearch/
+gpgcheck=1
+gpgkey=http://mirror.tuna.tsinghua.edu.cn/centos-vault/RPM-GPG-KEY-CentOS-6
+
+#additional packages that may be useful
+[extras]
+name=CentOS-6.8 - Extras - tuna.tsinghua.edu.cn
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/centos-vault/6.8/extras/$basearch/
+gpgcheck=1
+gpgkey=http://mirror.tuna.tsinghua.edu.cn/centos-vault/RPM-GPG-KEY-CentOS-6
+
+#additional packages that extend functionality of existing packages
+[centos-vaultplus]
+name=CentOS-6.8 - Plus - tuna.tsinghua.edu.cn
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/centos-vault/6.8/centos-vaultplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirror.tuna.tsinghua.edu.cn/centos-vault/RPM-GPG-KEY-CentOS-6
+
+#contrib - packages by Centos Users
+[contrib]
+name=CentOS-6.8 - Contrib - tuna.tsinghua.edu.cn
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/centos-vault/6.8/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirror.tuna.tsinghua.edu.cn/centos-vault/RPM-GPG-KEY-CentOS-6
+~                                                                                                                                                                                                                                     
+~                                         
