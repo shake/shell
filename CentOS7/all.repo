@@ -1,0 +1,43 @@
+[base]
+name=CentOS-$releasever - Base - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/os/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+#released updates 
+[updates]
+name=CentOS-$releasever - Updates - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/updates/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/extras/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/centosplus/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+gpgcheck=1
+enabled=0
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+[centos-kernel]
+name=CentOS LTS Kernels for $basearch
+baseurl=https://repo.huaweicloud.com/centos-altarch/7/kernel/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+[epel]
+name=Centos EPEL
+baseurl=https://repo.huaweicloud.com/epel/7/x86_64/
+gpgcheck=0
