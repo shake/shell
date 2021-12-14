@@ -33,7 +33,7 @@ spec:
     version: v1.20.4
     clusterName: cluster.local
     apiserverArgs:
-    - service-node-port-range=30800-30900
+    - service-node-port-range=30000-32767
   network:
     plugin: flannel
     flannel:
