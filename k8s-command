@@ -1,0 +1,2 @@
+##check have been use node port default node port range is 30000 - 32767 modify through /etc/kubernetes/manifests/kube-apiserver.yaml ,add config /etc/kubernetes/manifests/kube-apiserver.yaml with --service-node-port-range=20000-22767.
+kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}{{end}}'
