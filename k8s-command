@@ -1,2 +1,27 @@
-##check have been use node port default node port range is 30000 - 32767 modify through /etc/kubernetes/manifests/kube-apiserver.yaml ,add config /etc/kubernetes/manifests/kube-apiserver.yaml with --service-node-port-range=20000-22767.
+##check have been use node port default node port range is 30000 - 32767 
+##modify through /etc/kubernetes/manifests/kube-apiserver.yaml ,
+##add config /etc/kubernetes/manifests/kube-apiserver.yaml with --service-node-port-range=20000-22767.
 kubectl get svc --all-namespaces -o go-template='{{range .items}}{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}{{end}}'
+
+## k8s use images (from https://blog.k8s.li/shell-snippet.html)
+kubectl get pods -A -o=custom-columns='IMAGE:spec.containers[*].image' | tr ',' '\n' | sort -u
+
+## 获取集群中节点的 IP
+kubectl get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="InternalIP")].address }'
+
+##获取所有 Pod 的 IP
+kubectl get pods -o jsonpath='{ $.items[*].status.podIP }'
+
+##获取所有 node 节点的子网信息
+kubectl get nodes -o jsonpath='{.items[*].spec.podCIDR}'
+
+##获取所有 service 的 IP
+kubectl get svc --no-headers --all-namespaces -o jsonpath='{$.items[*].spec.clusterIP}'
+
+##根据 CPU/RAM 占用排序
+# cpu
+kubectl top pods --all-namespaces | sort --reverse --key 3 --numeric
+# memory
+kubectl top pods --all-namespaces | sort --reverse --key 4 --numeric
+
+
