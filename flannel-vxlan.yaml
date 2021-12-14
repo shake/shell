@@ -32,6 +32,8 @@ spec:
   kubernetes:
     version: v1.20.4
     clusterName: cluster.local
+    apiserverArgs:
+    - service-node-port-range=30800-30900
   network:
     plugin: flannel
     flannel:
