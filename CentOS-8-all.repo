@@ -1,0 +1,29 @@
+[BaseOS]
+name=CentOS-8 - Base - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/8/BaseOS/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=CentOS-8 - AppStream - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/8/AppStream/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[PowerTools]
+name=CentOS-8 - PowerTools - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/8/PowerTools/x86_64/os/
+enabled=1
+gpgcheck=0
+
+[epel]
+name=Extra Packages for Enterprise Linux 8
+baseurl=http://mirrors.cloud.aliyuncs.com/epel/8/Everything/x86_64
+enabled=1
+gpgcheck=0
+
+[elrepo-kernel]
+name=ELRepo.org Community Enterprise Linux Kernel Repository - el8
+baseurl=http://mirrors.tuna.tsinghua.edu.cn/elrepo/kernel/el8/x86_64/
+enabled=1
+gpgcheck=0
