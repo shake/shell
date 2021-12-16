@@ -27,3 +27,9 @@ name=ELRepo.org Community Enterprise Linux Kernel Repository - el8
 baseurl=http://mirrors.tuna.tsinghua.edu.cn/elrepo/kernel/el8/x86_64/
 enabled=1
 gpgcheck=0
+
+[docker-ce-stable]
+name=Docker CE Stable
+baseurl=https://repo.huaweicloud.com/docker-ce/linux/centos/8/x86_64/stable
+enabled=1
+gpgcheck=0
