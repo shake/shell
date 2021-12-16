@@ -18,7 +18,7 @@ gpgcheck=0
 
 [epel]
 name=Extra Packages for Enterprise Linux 8
-baseurl=http://mirrors.cloud.aliyuncs.com/epel/8/Everything/x86_64
+baseurl=http://repo.huaweicloud.com/epel/8/Everything/x86_64
 enabled=1
 gpgcheck=0
 
