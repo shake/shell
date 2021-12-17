@@ -62,7 +62,11 @@ disk-image-create -a amd64 -o  $image_name -x --image-size 80 vm base centos dis
  trusted-host=mirrors.cloud.aliyuncs.com
 
 
+##nexus upload and download file
 
+ curl -v -u admin:admin --upload-file get-pip.py https://hub.bj.sugon.tech:8443/repository/binary/tools/get-pip.py
+
+ curl -o get-pip.py https://hub.abc.tech:8443/repository/binary/tools/get-pip.py
 
 
 
