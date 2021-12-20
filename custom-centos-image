@@ -257,5 +257,13 @@ DIB_CLOUD_INIT_DATASOURCES="ConfigDrive, OpenStack"  disk-image-create -a amd64 
  curl -o get-pip.py https://hub.abc.tech:8443/repository/binary/tools/get-pip.py
 
 
+## zstack install agent
 
+cat cloud-images/zstack.sh 
+
+#!/bin/bash
+/bin/bash -c "$(curl -s -S http://169.254.169.254/vm-tools.sh)"
+sed -i 's/9100/9104/g' /usr/local/zstack/zwatch-vm-agent/conf.yaml
+/bin/systemctl restart zwatch-vm-agent.service
  
+  
