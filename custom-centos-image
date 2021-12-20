@@ -281,3 +281,75 @@ sed -i 's/9100/9104/g' /usr/local/zstack/zwatch-vm-agent/conf.yaml
 /bin/systemctl restart zwatch-vm-agent.service
  
   
+
+
+## CentOS 7
+[CentOS-Base]
+name=CentOS Base
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-7-Base/
+enabled=1
+gpgcheck=0
+
+[CentOS-Updates]
+name=CentOS Update
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-7-Update/
+enabled=1
+gpgcheck=0
+
+[CentOS-Extras]
+name=CentOS Extras
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-7-Extras/
+enabled=1
+gpgcheck=0
+
+[EPEL]
+name=CentOS EPEL
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-7-EPEL/
+enabled=1
+gpgcheck=0
+
+[CentOS-7-LTS-Kernels]
+name=CentOS LTS Kernels
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-7-LTS-Kernels/
+enabled=1
+gpgcheck=0
+
+
+
+## CentOS 8
+
+[BaseOS]
+name=CentOS-8 - Base
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-BaseOS/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=CentOS-8 - AppStream
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-AppStream/
+enabled=1
+gpgcheck=0
+
+[PowerTools]
+name=CentOS-8 - PowerTools
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-PowerTools/
+enabled=1
+gpgcheck=0
+
+[epel]
+name=Extra Packages for Enterprise Linux 8
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-EPEL/
+enabled=1
+gpgcheck=0
+
+[elrepo-kernel]
+name=ELRepo.org - el8
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-elrepo-kernel/
+enabled=1
+gpgcheck=0
+
+[docker-ce-stable]
+name=Docker CE Stable
+baseurl=https://hub.bj.sugon.tech:8443/repository/CentOS-8-Docker/
+enabled=1
+gpgcheck=0
