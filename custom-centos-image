@@ -47,6 +47,8 @@ export DIB_CLOUD_INIT_ALLOW_SSH_PWAUTH="yes"
 export DIB_AVOID_PACKAGES_UPDATE=1
 export image_name='CentOS-8.4-x86.qcow2'
 
+#disk builder images
+
 disk-image-create -a amd64 -o  $image_name -x --image-size 80 vm base centos disable-selinux cloud-init dhcp-all-interfaces
 
 # du -sh CentOS-8.4-x86.qcow2 
@@ -116,7 +118,7 @@ export DIB_CLOUD_INIT_ALLOW_SSH_PWAUTH="yes"
 export DIB_AVOID_PACKAGES_UPDATE=1
 export image_name='CentOS-7.9-x86.qcow2'
 
-##build image
+#disk builder images
 
 disk-image-create -a amd64 -o  $image_name -x --image-size 80 vm base centos disable-selinux cloud-init dhcp-all-interfaces
 
