@@ -1,5 +1,11 @@
-### Zstack for CentOS 8
+yum install centos-release-openstack-train -y
+yum install diskimage-builder -y
+yum install libguestfs-tools-c libguestfs-tools libguestfs -y
 
+
+
+### Zstack for CentOS 8
+mkdir cloud-images
 cd cloud-images
 export LIBGUESTFS_BACKEND=direct
 
@@ -11,7 +17,9 @@ virt-customize -a $image_name --run-command 'mv /etc/yum.repos.d/*.repo /etc/yum
 virt-customize -a $image_name --upload /root/cloud-images/CentOS-8-all.repo:/etc/yum.repos.d/CentOS-8-all.repo
 
 # update kernel and tools
-virt-customize -a $image_name --install kernel-lt,qemu-guest-agent,vim,wget,unzip,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,socat,conntrack,ebtables,ipset,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc
+virt-customize -a $image_name --install kernel-lt,qemu-guest-agent,vim,wget
+
+virt-customize -a $image_name --install unzip,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,socat,conntrack,ebtables,ipset,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc
 
 #enable service
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
