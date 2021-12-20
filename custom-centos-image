@@ -1,3 +1,7 @@
+####Zstack 镜像和OpenStack差异主要在agent的安装和datastore。
+####CentOS 8 和CentOS 7 差异，主要在升级内核的源，安装的包。
+
+
 yum install centos-release-openstack-train -y
 yum install diskimage-builder -y
 yum install libguestfs-tools-c libguestfs-tools libguestfs -y
@@ -29,7 +33,7 @@ virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent'
 virt-customize -a $image_name --timezone "Asia/Shanghai" 
 
 #SSH服务
- virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/GSS/#GSS/'
+virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/GSS/#GSS/'
 
 #环境变量
 virt-customize -a $image_name --append-line '/etc/profile:alias vi=vim'
