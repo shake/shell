@@ -23,7 +23,7 @@ virt-customize -a $image_name --upload /root/cloud-images/CentOS-8-all.repo:/etc
 # update kernel and tools
 virt-customize -a $image_name --install kernel-lt,qemu-guest-agent,vim,wget
 
-virt-customize -a $image_name --install unzip,jq,bash-completion,device-mapper-persistent-data,lvm2,iotop,iftop,nload,bridge-utils,bind-utils,nc,binutils,tree,psmisc,sysstat
+virt-customize -a $image_name --install unzip,jq,bash-completion,device-mapper-persistent-data,lvm2,iotop,iftop,nload,bridge-utils,bind-utils,nc,binutils,tree,psmisc,sysstat,nfs-utils
 
 virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 
@@ -91,7 +91,7 @@ virt-customize -a $image_name --upload /root/cloud-images/CentOS-7-all.repo:/etc
 #
 
 #安装工具 https://blog.k8s.li/My-brick-lifting-tools.html
-virt-customize -a $image_name --install kernel,net-tools,wget,vim,unzip,qemu-guest-agent,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,socat,conntrack,ebtables,ipset,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc
+virt-customize -a $image_name --install kernel,net-tools,wget,vim,unzip,qemu-guest-agent,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,socat,conntrack,ebtables,ipset,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc,nfs-utils
 
 #启动服务
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
