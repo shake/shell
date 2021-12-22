@@ -23,9 +23,9 @@ virt-customize -a $image_name --upload /root/cloud-images/CentOS-8-all.repo:/etc
 # update kernel and tools
 virt-customize -a $image_name --install kernel-lt,qemu-guest-agent,vim,wget
 
-virt-customize -a $image_name --install unzip,jq,bash-completion,device-mapper-persistent-data,lvm2,iotop,iftop,nload,bridge-utils,bind-utils,nc,binutils,tree,psmisc
+virt-customize -a $image_name --install unzip,jq,bash-completion,device-mapper-persistent-data,lvm2,iotop,iftop,nload,bridge-utils,bind-utils,nc,binutils,tree,psmisc,sysstat
 
-virt-customize -a $image_name --install socat,conntrack,ebtables,ipset,sysstat
+virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 
 #enable service
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
