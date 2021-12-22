@@ -2,9 +2,11 @@ export LIBGUESTFS_BACKEND=direct
 export image_name='focal-server-cloudimg-amd64.img' 
 
 
-virt-customize -a $image_name --run-command 'sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak'
+virt-customize -a $image_name --run-command 'sudo cp  /etc/apt/sources.list /etc/apt/sources.list.bak'
 virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
 virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
+virt-customize -a $image_name --run-command 'sudo cp  /etc/apt/sources.list /etc/apt/sources.list /etc/apt/sources.list.d/'
+
 
 
 
