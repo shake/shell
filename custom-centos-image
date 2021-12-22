@@ -46,6 +46,7 @@ virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_
 #clean yum
 
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/dnf/*' 
+virt-customize -a $image_name --run-command 'rm -f /etc/issue.d/cockpit.issue /etc/motd.d/cockpit'
 
 #inatall agent
 
