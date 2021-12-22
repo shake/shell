@@ -1,0 +1,19 @@
+export LIBGUESTFS_BACKEND=direct
+export image_name='focal-server-cloudimg-amd64.img' 
+
+
+virt-customize -a $image_name --run-command 'sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak'
+virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
+virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
+
+
+
+virt-customize -a $image_name --install qemu-guest-agent
+virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent'
+virt-customize -a $image_name --timezone "Asia/Shanghai" 
+
+virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/PasswordAuthentication no/PasswordAuthentication yes/'
+virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/#PermitRootLogin prohibit-password/PermitRootLogin yes/'
+qemu-img info focal-server-cloudimg-amd64.img
+qemu-img resize focal-server-cloudimg-amd64.img +77.8g
+
