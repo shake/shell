@@ -51,7 +51,7 @@ virt-customize -a $image_name --run-command 'rm -rf /var/cache/dnf/*'
 
 virt-customize -a $image_name --run-command 'mkdir -p /var/lib/cloud/scripts/per-once'
 virt-customize -a $image_name --upload /root/cloud-images/zstack.sh:/var/lib/cloud/scripts/per-once/zstack.sh
-virt-customize -a $image_name --run-command 'chmod +x var/lib/cloud/scripts/per-once/zstack.sh'
+virt-customize -a $image_name --run-command 'chmod +x /var/lib/cloud/scripts/per-once/zstack.sh'
 
 
 cd /root/
