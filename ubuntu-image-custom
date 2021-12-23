@@ -16,6 +16,12 @@ virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/#PermitRootLogin pr
 virt-customize -a $image_name --run-command ' touch /root/.hushlogin'
 virt-customize -a $image_name --append-line '/etc/profile:alias c="clear"'
 
+#inatall agent
+
+virt-customize -a $image_name --run-command 'mkdir -p /var/lib/cloud/scripts/per-once'
+virt-customize -a $image_name --upload /root/cloud-images/zstack.sh:/var/lib/cloud/scripts/per-once/zstack.sh
+virt-customize -a $image_name --run-command 'chmod +x /var/lib/cloud/scripts/per-once/zstack.sh'
+
 qemu-img info focal-server-cloudimg-amd64.img
 qemu-img resize focal-server-cloudimg-amd64.img +78g
 
