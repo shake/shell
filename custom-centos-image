@@ -161,7 +161,7 @@ virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/GSS/#GSS/'
 virt-customize -a $image_name --append-line '/etc/profile:alias vi=vim'
 virt-customize -a $image_name --append-line '/etc/profile:alias c="clear"'
 virt-customize -a $image_name --append-line '/etc/profile:unset MAILCHECK'
-virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_US.UTF-8"'
+virt-customize -a $image_name --append-line '/root/.bash_profile:export LANG="en_US.UTF-8"'
 
 #clean yum
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/dnf/*' 
@@ -220,7 +220,7 @@ virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/#UseDNS yes/UseDNS 
 virt-customize -a $image_name --append-line '/etc/profile:alias vi=vim'
 virt-customize -a $image_name --append-line '/etc/profile:alias c="clear"'
 virt-customize -a $image_name --append-line '/etc/profile:unset MAILCHECK'
-virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_US.UTF-8"'
+virt-customize -a $image_name --append-line '/root/.bash_profile:export LANG="en_US.UTF-8"'
 
 
 #clean yum，不能运行yum clean all，会导致镜像加大。这样就足够。最终镜像730M大小，
