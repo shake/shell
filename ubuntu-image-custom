@@ -1,13 +1,9 @@
 export LIBGUESTFS_BACKEND=direct
 export image_name='focal-server-cloudimg-amd64.img' 
 
-
 virt-customize -a $image_name --run-command 'sudo cp  /etc/apt/sources.list /etc/apt/sources.list.bak'
-virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
-virt-customize -a $image_name --run-command 'sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list'
-virt-customize -a $image_name --run-command 'sudo cp  /etc/apt/sources.list /etc/apt/sources.list /etc/apt/sources.list.d/'
-
-
+virt-customize -a $image_name --upload /root/cloud-images/sources.list:/etc/apt/sources.list
+virt-customize -a $image_name --run-command 'sudo sed "13a apt_preserve_sources_list: true" -i /etc/cloud/cloud.cfg'
 
 
 virt-customize -a $image_name --install qemu-guest-agent
@@ -16,6 +12,10 @@ virt-customize -a $image_name --timezone "Asia/Shanghai"
 
 virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/PasswordAuthentication no/PasswordAuthentication yes/'
 virt-customize -a $image_name --edit '/etc/ssh/sshd_config:s/#PermitRootLogin prohibit-password/PermitRootLogin yes/'
+
+virt-customize -a $image_name --run-command ' touch /root/.hushlogin'
+virt-customize -a $image_name --append-line '/etc/profile:alias c="clear"'
+
 qemu-img info focal-server-cloudimg-amd64.img
-qemu-img resize focal-server-cloudimg-amd64.img +77.8g
+qemu-img resize focal-server-cloudimg-amd64.img +78g
 
