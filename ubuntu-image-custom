@@ -25,3 +25,6 @@ virt-customize -a $image_name --run-command 'chmod +x /var/lib/cloud/scripts/per
 qemu-img info focal-server-cloudimg-amd64.img
 qemu-img resize focal-server-cloudimg-amd64.img +78g
 
+
+## 参考下面文章，命令可以多条一起运行。如果需要。
+https://platform9.com/blog/how-to-create-customized-qcow-images/
