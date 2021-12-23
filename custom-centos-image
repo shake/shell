@@ -35,7 +35,6 @@ virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
 
 # 设置时区
-
 virt-customize -a $image_name --timezone "Asia/Shanghai" 
 
 #SSH服务
@@ -48,12 +47,10 @@ virt-customize -a $image_name --append-line '/etc/profile:unset MAILCHECK'
 virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_US.UTF-8"'
 
 #clean yum
-
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/dnf/*' 
 virt-customize -a $image_name --run-command 'rm -f /etc/issue.d/cockpit.issue /etc/motd.d/cockpit'
 
 #inatall agent
-
 virt-customize -a $image_name --run-command 'mkdir -p /var/lib/cloud/scripts/per-once'
 virt-customize -a $image_name --upload /root/cloud-images/zstack.sh:/var/lib/cloud/scripts/per-once/zstack.sh
 virt-customize -a $image_name --run-command 'chmod +x /var/lib/cloud/scripts/per-once/zstack.sh'
@@ -67,13 +64,7 @@ export DIB_AVOID_PACKAGES_UPDATE=1
 export image_name='CentOS-8.4-x86.qcow2'
 
 #disk builder images
-
 disk-image-create -a amd64 -o  $image_name -x --image-size 80 vm base centos disable-selinux cloud-init dhcp-all-interfaces
-
-# du -sh CentOS-8.4-x86.qcow2 
-1.1G	CentOS-8.4-x86.qcow2
-
-
 
 
 ### Zstack for CentOS 7
@@ -92,20 +83,17 @@ export image_name='CentOS-7-x86_64-GenericCloud-2009.qcow2'
 virt-customize -a $image_name --run-command 'mkdir /etc/yum.repos.d/backup'
 virt-customize -a $image_name --run-command 'mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup/'
 virt-customize -a $image_name --upload /root/cloud-images/CentOS-7-all.repo:/etc/yum.repos.d/CentOS-7-all.repo
-#
 
-#安装工具
+
+##安装工具
 virt-customize -a $image_name --install kernel,vim,qemu-guest-agent
-
 virt-customize -a $image_name --install net-tools,wget,unzip,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc,nfs-utils
-
 virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 
 #启动服务
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
 
 # 设置时区
-
 virt-customize -a $image_name --timezone "Asia/Shanghai" 
 
 #SSH服务
@@ -126,7 +114,6 @@ virt-customize -a $image_name --upload /root/cloud-images/zstack.sh:/var/lib/clo
 virt-customize -a $image_name --run-command 'chmod +x var/lib/cloud/scripts/per-once/zstack.sh'
 
 #clean yum，不能运行yum clean all，会导致镜像加大。这样就足够。最终镜像730M大小，
-
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/yum/*' 
 
 ##DIB
@@ -141,7 +128,6 @@ export DIB_AVOID_PACKAGES_UPDATE=1
 export image_name='CentOS-7.9-x86.qcow2'
 
 #disk builder images
-
 disk-image-create -a amd64 -o  $image_name -x --image-size 80 vm base centos disable-selinux cloud-init dhcp-all-interfaces
 
 
@@ -161,16 +147,13 @@ virt-customize -a $image_name --upload /root/cloud-images/CentOS-8-all.repo:/etc
 
 # update kernel and tools
 virt-customize -a $image_name --install kernel-lt,qemu-guest-agent,vim
-
 virt-customize -a $image_name --install wget,unzip,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc
-
 virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 
 #enable service
 virt-customize -a $image_name --run-command 'systemctl enable qemu-guest-agent' 
 
 # 设置时区
-
 virt-customize -a $image_name --timezone "Asia/Shanghai" 
 
 #SSH服务
@@ -183,7 +166,6 @@ virt-customize -a $image_name --append-line '/etc/profile:unset MAILCHECK'
 virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_US.UTF-8"'
 
 #clean yum
-
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/dnf/*' 
 
 ##DIB
@@ -199,8 +181,7 @@ export image_name='CentOS-8.4-x86.qcow2'
 
 DIB_CLOUD_INIT_DATASOURCES="ConfigDrive, OpenStack"  disk-image-create -a amd64 -o $image_name  -x --image-size 40 vm base centos disable-selinux cloud-init cloud-init-datasources dhcp-all-interfaces growroot
 
-# du -sh CentOS-8.4-x86.qcow2 
-1.1G	CentOS-8.4-x86.qcow2
+
 
 
 ### OpenStack for CentOS 7
@@ -210,7 +191,6 @@ cd cloud-images
 # CentOS 7.9 镜像
 curl -O https://mirrors.ustc.edu.cn/centos-cloud/centos/7/images/CentOS-7-x86_64-GenericCloud-2009.qcow2
 
-export LIBGUESTFS_BACKEND=direct
 # pwd
 /root/cloud-images
 # 设置镜像变量
@@ -220,13 +200,11 @@ export image_name='CentOS-7-x86_64-GenericCloud-2009.qcow2'
 virt-customize -a $image_name --run-command 'mkdir /etc/yum.repos.d/backup'
 virt-customize -a $image_name --run-command 'mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup/'
 virt-customize -a $image_name --upload /root/cloud-images/CentOS-7-all.repo:/etc/yum.repos.d/CentOS-7-all.repo
-#
+
 
 #安装工具 
 virt-customize -a $image_name --install kernel,qemu-guest-agent,vim
-
 virt-customize -a $image_name --install net-tools,wget,unzip,jq,bash-completion,yum-utils,device-mapper-persistent-data,lvm2,openssl,sysstat,iotop,iftop,nload,bridge-utils,bash-completion,bind-utils,nc,binutils,tree,psmisc
-
 virt-customize -a $image_name --install socat,conntrack,ebtables,ipset
 
 
@@ -248,7 +226,6 @@ virt-customize -a $image_name --append-line 'root/.bash_profile:export LANG="en_
 
 
 #clean yum，不能运行yum clean all，会导致镜像加大。这样就足够。最终镜像730M大小，
-
 virt-customize -a $image_name --run-command 'rm -rf /var/cache/yum/*' 
 
 ##DIB
@@ -263,7 +240,6 @@ export DIB_AVOID_PACKAGES_UPDATE=1
 export image_name='CentOS-7.9-x86.qcow2'
 
 ##build image
-
 DIB_CLOUD_INIT_DATASOURCES="ConfigDrive, OpenStack"  disk-image-create -a amd64 -o $image_name  -x --image-size 40 vm base centos disable-selinux cloud-init cloud-init-datasources dhcp-all-interfaces growroot
 
 
