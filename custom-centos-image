@@ -245,6 +245,15 @@ DIB_CLOUD_INIT_DATASOURCES="ConfigDrive, OpenStack"  disk-image-create -a amd64 
 
 ###附录
 
+##修改密码
+virt-customize -a $image_name --root-password password:chenshake 
+##替换repo
+
+virt-customize -a $image_name --run-command ‘rm /etc/yum.repos.d/CentOS-7-all.repo'
+virt-customize -a $image_name --run-command ‘wget -O /etc/yum.repos.d/all-huawei.repo https://raw.fastgit.org/shake/shell/main/CentOS7/all-huawei.repo'
+
+
+
 # cat .pip/pip.conf 
  ## Note, this file is written by cloud-init on first boot of an instance
  ## modifications made here will not survive a re-bundle.
