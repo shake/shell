@@ -5,7 +5,7 @@ metadata:
 spec:
   arches:
   - amd64
-  operationSystems:
+  operatingSystems:
   - arch: amd64
     type: linux
     id: centos
