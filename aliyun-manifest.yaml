@@ -13,8 +13,8 @@ spec:
     version: "7"
     repository:
       iso:
-        localPath: /mnt/sdb/kk2.0-rc/kubekey/centos-7-amd64-rpms.iso
-        url: #这里填写下载地址也可以
+        localPath: 
+        url: https://github.com/pixiake/k8s-dependencies/releases/download/v1.0.0/centos-7-amd64-rpms.iso
   kubernetesDistributions:
   - type: kubernetes
     version: v1.21.5
@@ -40,22 +40,12 @@ spec:
     docker-compose:
       version: v2.2.2
   images:
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-apiserver:v1.22.1
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-controller-manager:v1.22.1
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-proxy:v1.22.1
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-scheduler:v1.22.1
+
   - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-apiserver:v1.21.5
   - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-controller-manager:v1.21.5
   - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-proxy:v1.21.5
   - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-scheduler:v1.21.5
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-apiserver:v1.20.10
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-controller-manager:v1.20.10
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-proxy:v1.20.10
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-scheduler:v1.20.10
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-apiserver:v1.19.9
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-controller-manager:v1.19.9
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-proxy:v1.19.9
-  - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-scheduler:v1.19.9
+
   - registry.cn-beijing.aliyuncs.com/kubesphereio/pause:3.5
   - registry.cn-beijing.aliyuncs.com/kubesphereio/pause:3.4.1
   - registry.cn-beijing.aliyuncs.com/kubesphereio/coredns:1.8.0
