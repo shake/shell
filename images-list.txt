@@ -3,7 +3,6 @@ kubesphereio/kube-apiserver:v1.21.5
 kubesphereio/kube-controller-manager:v1.21.5
 kubesphereio/kube-proxy:v1.21.5
 kubesphereio/kube-scheduler:v1.21.5
-
 kubesphereio/pause:3.5
 kubesphereio/pause:3.4.1
 kubesphereio/coredns:1.8.0
