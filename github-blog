@@ -5,6 +5,7 @@
 2：设置ssh key
 ssh-keygen -t rsa -C "shake.chen@gmail.com"
 
+#admin .ssh 文件夹下有相应的文件。把公钥放到github上
 
 #在 shake.github.io 添加key 
 
