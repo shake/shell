@@ -32,12 +32,13 @@ vps命令维护
 
 * Web服务器 nginx 安装成功! 伪装站点为 ai.xxx.site
 * 伪装站点的静态html内容放置在目录 /nginxweb/html, 可自行更换网站内容.
-  
+
+``
     nginx 配置路径 /etc/nginx/nginx.conf
     nginx 访问日志 /nginxweb/nginx-access.log
     nginx 错误日志 /nginxweb/nginx-error.log
     nginx 查看日志命令: journalctl -n 50 -u nginx.service
-  
+  ``
   nginx 启动命令: systemctl start nginx.service
   nginx 停止命令: systemctl stop nginx.service
   nginx 重启命令: systemctl restart nginx.service
