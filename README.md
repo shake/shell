@@ -109,3 +109,5 @@ bash <(curl -Lso- https://git.io/oneclick)
  88. 升级脚本
  0. 退出脚本
 ```
+
+我采用15选项，套接到cloudfire上。如果希望查看安装生成的信息，运行25就可以。
