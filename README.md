@@ -2,7 +2,7 @@
 
 搬瓦工的vps，[官网]（https://bandwagonhost.com/）
 
-[老大](https://github.com/jinwyp)
+[官网](https://github.com/jinwyp)
 
   bash <(curl -Lso- https://git.io/oneclick)
 
