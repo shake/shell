@@ -27,7 +27,7 @@ eu.org 的二级域名，还没拿到，搞定以后就不需要折腾域名的�
 
 [客户端](https://github.com/2dust) 。win11，6.33版本，
 * 需要额外安装 [Microsoft .NET 6.0 Desktop Runtime]（https://download.visualstudio.microsoft.com/download/pr/513d13b7-b456-45af-828b-b7b7981ff462/edf44a743b78f8b54a2cec97ce888346/windowsdesktop-runtime-6.0.15-win-x64.exe）
-* [v2rayN-With-Core.zip](https://github.com/2dust/v2rayN/releases/download/6.33/v2rayN-With-Core.zip)
+* [v2rayN-With-Core.zip] (https://github.com/2dust/v2rayN/releases/download/6.33/v2rayN-With-Core.zip)
 
 
 # vps命令维护
