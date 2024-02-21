@@ -58,11 +58,12 @@ eu.org 的二级域名，还没拿到，搞定以后就不需要折腾域名的�
 
 
 
-`root@fancy-idea-1:~# bash <(curl -Lso- https://git.io/oneclick)
+`# bash <(curl -Lso- https://git.io/oneclick)
  OS info: Ubuntu, ubuntu, 22.04, 22.04, jammy, intel CPU amd64, bash, apt-get, /lib/systemd/system/
- ====================================================================================================
+
  Trojan-go V2ray Xray 一键安装脚本 | 2024-2-3 | 系统支持：centos7+ / debian9+ / ubuntu16.04+
- ====================================================================================================
+
+
  1. 安装linux内核 bbr plus, 安装WireGuard, 用于解锁 Netflix 限制和避免弹出 Google reCAPTCHA 人机验证
 
  2. 安装 trojan/trojan-go 和 nginx, 支持CDN 开启websocket, trojan-go 运行在443端口
