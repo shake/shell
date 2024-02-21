@@ -57,8 +57,8 @@ eu.org 的二级域名，还没拿到，搞定以后就不需要折腾域名的�
 
 
 
-
-`# bash <(curl -Lso- https://git.io/oneclick)
+```
+bash <(curl -Lso- https://git.io/oneclick)
  OS info: Ubuntu, ubuntu, 22.04, 22.04, jammy, intel CPU amd64, bash, apt-get, /lib/systemd/system/
 
  Trojan-go V2ray Xray 一键安装脚本 | 2024-2-3 | 系统支持：centos7+ / debian9+ / ubuntu16.04+
@@ -107,4 +107,5 @@ eu.org 的二级域名，还没拿到，搞定以后就不需要折腾域名的�
  45. 用 VI 编辑 authorized_keys 文件 填入公钥, 用于SSH免密码登录 增加安全性
 
  88. 升级脚本
- 0. 退出脚本`
+ 0. 退出脚本
+```
