@@ -131,3 +131,41 @@ bash <(curl -Lso- https://git.io/oneclick)
   gvt2.com
 
 关闭广告的屏蔽，这样就好用很多了。
+
+已经验证了一天，确实已经好很多。
+
+###规则设置
+
+规则的顺序会影响效果，所以我把第一条规则：
+
+### 设置proxy，让他优先执行。
+
+domain里增加了
+
+  googleapis.com,
+  gstatic.com,
+  gvt2.com
+
+  这样google访问就没有任何问题。
+
+### direct
+
+  geosite:cn
+
+应该一个就足够。国内的域名可以直接访问。
+
+### 关闭广告拦截
+
+这个其实是避免拦截广告后加载很慢。enable，关闭就可以。
+
+### 内网vpn的 direct
+
+这是最方便的地方，可以加上 
+
+  geoip:private,
+
+这样就走直接访问。解决切换代理的问题。
+
+  
+
+
