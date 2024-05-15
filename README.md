@@ -8,6 +8,10 @@ nc -zv 服务器IP地址 443
 
 bash -c "$(curl -L https://github.com/shake/Xray-install/raw/main/install-release.sh)" @ install
 
+删除
+
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove --purge
+
 ## 通过命令生成uuid
 
 cd /usr/local/bin/
