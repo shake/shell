@@ -37,6 +37,10 @@ cd /usr/local/etc/xray/
 修改config.json文件
 
 
+# bbr3
+
+curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
+
 
 
 # 下面内容已经过时
