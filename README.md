@@ -28,6 +28,7 @@ cd /usr/local/bin/
 四、查看uuid 和key
 
 cat uuid
+
 cat key
 
 五、上传配置文件和修改配置文件，官方提供的模板
