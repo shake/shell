@@ -33,8 +33,12 @@ cat key
 
 cd /usr/local/etc/xray/
 
-修改config.json文件
+[修改config.json文件](https://github.com/shake/shell/blob/main/Xray-install/config.json)
 
+修改必填，只有2项是必填。从上面步骤获取uuid和私钥
+
+* "id": "28d274ea-491f-4fb4-91de-9cf38beb374b", // 必填，改成自己的uuid
+* "privateKey": "OJOXrEfVy1jWvMkK72X7HnfY1-GxFUEvaCv7236F1Cc", // 必填，刚才生成的私钥Private key
 
 
 # bbr3
