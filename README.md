@@ -7,29 +7,29 @@ URL: https://nerdvm.racknerd.com/
 
 [文档](https://raw.githubusercontent.com/yirenchengfeng1/linux/main/reality%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4)
 
-# 安装xray
+## 安装xray
 
 [修复启动bug](https://github.com/trojan-gfw/trojan/issues/612)
 
 bash -c "$(curl -L https://github.com/shake/Xray-install/raw/main/install-release.sh)" @ install
 
-# 通过命令生成uuid
+## 通过命令生成uuid
 
 cd /usr/local/bin/
 
 ./xray uuid > uuid
 
-# 生成公、私密钥
+## 生成公、私密钥
 
 ./xray x25519 > key
 
-# 查看uuid 和key
+## 查看uuid 和key
 
 cat uuid
 
 cat key
 
-# 上传配置文件和修改配置文件，官方提供的模板
+## 上传配置文件和修改配置文件，官方提供的模板
 
 cd /usr/local/etc/xray/
 
