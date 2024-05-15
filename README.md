@@ -1,9 +1,4 @@
-技术产生的变化，同时为了节省成本，把vps更换成11美金一年。
-
 nc -zv 服务器IP地址 443
-
-
-URL: https://nerdvm.racknerd.com/
 
 [文档](https://raw.githubusercontent.com/yirenchengfeng1/linux/main/reality%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4)
 
