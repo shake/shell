@@ -1,3 +1,5 @@
+apt -y install netcat zip
+
 nc -zv 服务器IP地址 443
 
 [文档](https://raw.githubusercontent.com/yirenchengfeng1/linux/main/reality%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4)
