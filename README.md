@@ -1,3 +1,12 @@
+## hysteria2 
+
+一键安装脚本
+
+  wget -N --no-check-certificate https://raw.githubusercontent.com/lanhebe/hysteria/master/hy2_onekey_install.sh && chmod +x hy2_onekey_install.sh && ./hy2_onekey_install.sh
+
+
+[参考文章](https://yugogo.xyz/?p=2152) 
+
 apt -y install netcat zip
 
 nc -zv 服务器IP地址 443
