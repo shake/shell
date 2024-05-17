@@ -64,6 +64,13 @@ curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejili
 
 
 
+## x-ui
+
+bash <(wget -qO- https://gitlab.com/rwkgyg/x-ui-yg/raw/main/install.sh 2> /dev/null)
+
+脚本完成全部的安装。
+
+
 # 下面内容已经过时
 
 记录一下梯子的过程
