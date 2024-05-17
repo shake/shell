@@ -7,6 +7,13 @@
 
 [参考文章](https://yugogo.xyz/?p=2152) 
 
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh && bash hysteria.sh
+
+[参考文章](https://mgxray.xyz/429/)
+
+
+
 apt -y install netcat zip
 
 nc -zv 服务器IP地址 443
