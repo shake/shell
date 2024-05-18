@@ -1,5 +1,10 @@
 ## hysteria2 
 
+[v2rayn 正常工作](https://v2rayssr.com/hysteria2.html)
+
+唯一能正常工作的。
+
+
 一键安装脚本
 
   wget -N --no-check-certificate https://raw.githubusercontent.com/lanhebe/hysteria/master/hy2_onekey_install.sh && chmod +x hy2_onekey_install.sh && ./hy2_onekey_install.sh
