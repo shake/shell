@@ -4,6 +4,10 @@
 
 唯一能正常工作的。
 
+https://www.limin.studio/2024/05/test.html
+
+确实是没问题。
+
 
 一键安装脚本
 
