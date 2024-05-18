@@ -1,5 +1,11 @@
 ## hysteria2 
 
+[官方文档参数说明，讲的非常好](https://www.youtube.com/watch?v=foeIUgjlrGo) 
+
+就看这一个文档就足够。[作者blog](https://idev.dev/proxy/hysteria2.html)
+
+[参考文章](https://inkflow.cc/proxy/43.html)
+
 [v2rayn 正常工作](https://v2rayssr.com/hysteria2.html)
 
 唯一能正常工作的。
