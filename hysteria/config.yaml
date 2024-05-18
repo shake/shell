@@ -1,3 +1,7 @@
+# 安装或升级到最新版本 Hysteria 2: 官方脚本
+#bash <(curl -fsSL https://get.hy2.sh/)
+# 移除 Hysteria 2:
+#bash <(curl -fsSL https://get.hy2.sh/) --remove
 # 自己签发证书
 # openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/private.key -out /etc/hysteria/cert.crt -subj "/CN=bing.com" -days 36500 && sudo chown hysteria /etc/hysteria/server.key && sudo chown hysteria /etc/hysteria/server.crt
 
