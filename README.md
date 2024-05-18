@@ -77,6 +77,8 @@ cd /usr/local/etc/xray/
 
 curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
 
+[手工安装文档](https://zhuanlan.zhihu.com/p/661476970)
+
 
 
 ## x-ui
