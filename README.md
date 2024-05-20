@@ -87,6 +87,11 @@ bash <(wget -qO- https://gitlab.com/rwkgyg/x-ui-yg/raw/main/install.sh 2> /dev/n
 
 脚本完成全部的安装。
 
+<details><summary>存档内容</summary>
+<p>
+
+
+
 
 # 下面内容已经过时
 
@@ -259,5 +264,7 @@ domain里增加了
 这样就走直接访问。解决切换代理的问题。
 
   
+</p>
+</details> 
 
 
