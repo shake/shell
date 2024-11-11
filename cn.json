@@ -361,7 +361,7 @@
     "Default (model)": "默认（模型）",
     "Forced Overwrite of Sampling Step": "强制覆盖采样步骤",
     "Set as -1 to disable. For developer debugging.": "设为-1以禁用。用于开发者调试。",
-    "Forced Overwrite of Refiner Switch Step": "强制覆盖细化器切换步骤",
+    "Forced Overwrite of Refiner Switch Step": "强制覆盖优化器切换步骤",
     "Forced Overwrite of Generating Width": "强制覆盖生成宽度",
     "Set as -1 to disable. For developer debugging. Results will be worse for non-standard numbers that SDXL is not trained on.": "设为-1以禁用。用于开发者调试。非标准数值会导致结果较差，SDXL未在其上训练。",
     "Forced Overwrite of Generating Height": "强制覆盖生成高度",
