@@ -1,9 +1,3 @@
-You can modify your "/content/Fooocus/config.txt" using the below keys, formats, and examples.
-Do not modify this file. Modifications in this file will not take effect.
-This file is a tutorial and example. Please edit "/content/Fooocus/config.txt" to really change any settings.
-Remember to split the paths with "\\" rather than "\", and there is no "," before the last "}". 
-
-
 {
     "path_checkpoints": [
         "/content/Fooocus/models/checkpoints"
