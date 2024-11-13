@@ -79,7 +79,7 @@
     "default_image_prompt_advanced_checkbox": false,
     "default_max_image_number": 32,
     "default_output_format": "png",
-    "default_image_number": 2,
+    "default_image_number": 1,
     "checkpoint_downloads": {
         "juggernautXL_v8Rundiffusion.safetensors": "https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/juggernautXL_v8Rundiffusion.safetensors"
     },
